@@ -88,6 +88,7 @@ augment_columns <- function(x, data, newdata, type, type.predict = type,
     influence0 <- purrr::possibly(stats::influence, NULL)
     cooks.distance0 <- purrr::possibly(stats::cooks.distance, NULL)
     rstandard0 <- purrr::possibly(stats::rstandard, NULL)
+    rstudent0 <- purrr::possibly(stats::rstudent, NULL)
     predict0 <- purrr::possibly(stats::predict, NULL)
     
     # call predict with arguments
